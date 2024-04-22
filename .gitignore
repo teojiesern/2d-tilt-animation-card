@@ -1,35 +1,51 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
 node_modules/
-
-# Expo
 .expo/
 dist/
-web-build/
-
-# Native
-*.orig.*
+npm-debug.*
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
+*.orig.*
+web-build/
+coverage/
 
-# Metro
+.DS_Store
 .metro-health-check*
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
-.DS_Store
-*.pem
-
-# local env files
 .env*.local
 
-# typescript
-*.tsbuildinfo
+android/**/*
+modules/**/android/.gradle/**/*
+modules/**/android/build/**/*
+ios/**/*
+*.ipa
+*.apk
+*.app
+*.tar.gz
+.idea/
+.npmrc
+.env*
+.VSCodeCounter
+
+# local build
+# ios
+build-*.ipa
+
+# android
+build-*.aab
+build-*.apk
+
+# targets
+targets/widget-ios/Assets.xcassets
+
+# env specific expo native module
+modules/vidaLiveness/expo-module.config.json
+modules/zoloz/expo-module.config.json
+
+# force include
+!scripts/deeplink-directory-generation/dist
+scripts/deeplink-directory-generation/dist/docs
+
+!scripts/module-content-generation/dist
